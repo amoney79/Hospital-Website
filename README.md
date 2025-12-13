@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-  <img src="images/screenshots/home.png" alt="Marafiki Community Hospital Website" width="90%">
+  <img src="images/screenshots/HOME.png" alt="Marafiki Community Hospital Website" width="90%">
 </p>
 
 > 🌍 *Providing accessible healthcare information, strengthening community trust, and supporting quality medical services through a modern digital platform.*
@@ -94,7 +94,7 @@ The website supports the hospital’s mission by improving communication, visibi
 ## 🖼️ Website Screenshots
 
 <p align="center"><b>Home Page</b></p>
-<p align="center"><img src="images/screenshots/home.png" width="80%"></p>
+<p align="center"><img src="images/screenshots/HOME.png" width="80%"></p>
 
 <p align="center"><b>About Us</b></p>
 <p align="center"><img src="images/screenshots/about.png" width="80%"></p>
@@ -106,7 +106,7 @@ The website supports the hospital’s mission by improving communication, visibi
 <p align="center"><img src="images/screenshots/doctors.png" width="80%"></p>
 
 <p align="center"><b>Departments</b></p>
-<p align="center"><img src="images/screenshots/departments.png" width="80%"></p>
+<p align="center"><img src="images/screenshots/appointment.png" width="80%"></p>
 
 <p align="center"><b>Gallery</b></p>
 <p align="center"><img src="images/screenshots/gallery.png" width="80%"></p>
@@ -115,7 +115,7 @@ The website supports the hospital’s mission by improving communication, visibi
 <p align="center"><img src="images/screenshots/contact.png" width="80%"></p>
 
 <p align="center"><b>Donation</b></p>
-<p align="center"><img src="images/screenshots/donation.png" width="80%"></p>
+<p align="center"><img src="images/screenshots/donations.png" width="80%"></p>
 
 ---
 
