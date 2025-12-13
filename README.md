@@ -112,7 +112,7 @@ The website supports the hospital’s mission by improving communication, visibi
 <p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/gallery.png" width="80%"></p>
 
 <p align="center"><b>Contact</b></p>
-<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/donations.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/contact.png" width="80%"></p>
 
 <p align="center"><b>Donation</b></p>
 <p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/donations.png" width="80%"></p>
