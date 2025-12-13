@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-  <img src="images/screenshots/HOME.png" alt="Marafiki Community Hospital Website" width="90%">
+  <img src="[images/screenshots/HOME.png](https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/HOME.png)" alt="Marafiki Community Hospital Website" width="90%">
 </p>
 
 > 🌍 *Providing accessible healthcare information, strengthening community trust, and supporting quality medical services through a modern digital platform.*
