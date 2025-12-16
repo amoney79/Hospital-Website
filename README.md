@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-  <img src="images/screenshots/HOME.png" alt="Marafiki Community Hospital Website" width="90%">
+  <img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/HOME.png" alt="Marafiki Community Hospital Website" width="90%">
 </p>
 
 > 🌍 *Providing accessible healthcare information, strengthening community trust, and supporting quality medical services through a modern digital platform.*
@@ -94,28 +94,28 @@ The website supports the hospital’s mission by improving communication, visibi
 ## 🖼️ Website Screenshots
 
 <p align="center"><b>Home Page</b></p>
-<p align="center"><img src="images/screenshots/HOME.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/HOME.png" width="80%"></p>
 
 <p align="center"><b>About Us</b></p>
-<p align="center"><img src="images/screenshots/about.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/about.png" width="80%"></p>
 
 <p align="center"><b>Services</b></p>
-<p align="center"><img src="images/screenshots/services.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/services.png" width="80%"></p>
 
 <p align="center"><b>Doctors</b></p>
-<p align="center"><img src="images/screenshots/doctors.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/doctors.png" width="80%"></p>
 
-<p align="center"><b>Departments</b></p>
-<p align="center"><img src="images/screenshots/appointment.png" width="80%"></p>
+<p align="center"><b>Appointment</b></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/appointment.png" width="80%"></p>
 
 <p align="center"><b>Gallery</b></p>
-<p align="center"><img src="images/screenshots/gallery.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/gallery.png" width="80%"></p>
 
 <p align="center"><b>Contact</b></p>
-<p align="center"><img src="images/screenshots/contact.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/contact.png" width="80%"></p>
 
 <p align="center"><b>Donation</b></p>
-<p align="center"><img src="images/screenshots/donations.png" width="80%"></p>
+<p align="center"><img src="https://github.com/amoney79/Hospital-Website/blob/master/health/images/screenshots/donations.png" width="80%"></p>
 
 ---
 
