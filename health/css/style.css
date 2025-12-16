@@ -902,107 +902,34 @@ textarea {
   display: inline-block;
   font-weight: 600;
 }
-
-/* ---------- Testimonials: visible overlapping avatars & RTL carousel ---------- */
-.bg-testimonials { position: relative; overflow: hidden; }
-.bg-testimonials .container { overflow: visible; }
-
-/* ensure owl stage allows visible overflow for avatars */
-.testimonials-carousel,
-.testimonials-carousel .owl-stage-outer,
-.testimonials-carousel .owl-stage,
-.testimonials-carousel .owl-item {
-  overflow: visible !important;
-}
-
-/* testimonial card */
-.testimonial-card{
+.testimonials-wrapper {
+  overflow: hidden;
   position: relative;
-  overflow: visible;
-  background:#fff;
-  border-radius:8px;
-  padding:30px 30px 28px 140px; /* room on left for avatar */
-  box-shadow: 0 8px 28px rgba(15,30,45,0.10);
-  min-height:200px;
-  transition: transform .28s ease, box-shadow .28s ease;
+  width: 100%;
 }
 
-/* avatar: larger and overlapping */
-.testimonial-avatar{
-  position: absolute;
-  left: 18px;               /* visible outside card */
-  top: 50%;
-  transform: translateY(-50%);
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  border:8px solid #fff;
-  box-shadow: 0 10px 30px rgba(15,30,45,0.14);
-  z-index:50;
-  background:#fff;
+.testimonials-track {
+  display: flex;
+  gap: 24px;
+  animation: slide-rtl 12s linear infinite;
 }
 
-/* content */
-.testimonial-body{
-  color:#6c7280;
-  font-size:15px;
-  line-height:1.6;
-  margin:0 0 6px 0;
+.testimonial-card {
+  flex: 0 0 300px; /* card width */
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* name & role */
-.testimonial-name{ font-weight:700; color:#222; margin-top:8px; }
-.testimonial-role{ font-size:12px; color:#3b59d8; text-transform:uppercase; letter-spacing:.06em; font-weight:600; }
-
-/* small green quote badge */
-.testimonial-quote{
-  position:absolute;
-  right:18px;
-  bottom:18px;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  background:#2fb873;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  box-shadow:0 6px 18px rgba(47,184,115,0.18);
-}
-
-/* hover: elevate card */
-.testimonial-card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 18px 44px rgba(15,30,45,0.14);
-}
-
-/* owl dots styling */
-.testimonials-carousel .owl-dots{ margin-top:26px; text-align:center; }
-.testimonials-carousel .owl-dot{ width:10px; height:10px; display:inline-block; margin:0 6px; border-radius:50%; background:rgba(255,255,255,0.45); }
-.testimonials-carousel .owl-dot.active{ background:#fff; }
-
-@media (max-width: 1199.98px) {
-  .testimonial-card { padding: 24px 24px 24px 100px; }
-  .testimonial-avatar { width: 100px; height: 100px; left: -50px; }
-}
-
-@media (max-width: 767.98px) {
-  .testimonial-card { 
-    padding: 80px 20px 24px;
-    min-height: auto;
+/* Smooth RTL scroll */
+@keyframes slide-rtl {
+  0% {
+    transform: translateX(100%);
   }
-  .testimonial-avatar { 
-    position: static;
-    transform: none;
-    width: 90px;
-    height: 90px;
-    margin: -45px auto 16px;
-    left: auto;
-    top: auto;
+  100% {
+    transform: translateX(-100%);
   }
-  .testimonial-quote { right: 16px; bottom: 16px; }
 }
 
 /* HERO MAIN (big image, right-aligned copy with select + CTA) */
@@ -1565,38 +1492,44 @@ textarea {
   margin-top: 8px;
 }
 
-/* testimonial cards (reuse from site but ensure spacing) */
-.testimonials-carousel .item { padding: 0 12px; }
-.testimonial-card {
-  background:#fff;
-  border-radius:8px;
-  padding:28px;
-  box-shadow:0 10px 30px rgba(15,30,45,0.06);
-  text-align:left;
-  overflow:visible;
-  min-height:180px;
+/* ===== Testimonials Slider ===== */
+.testimonials-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
-.testimonial-avatar{
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  object-fit:cover;
-  float:left;
-  margin-right:14px;
-  border:4px solid #fff;
-  box-shadow:0 8px 20px rgba(15,30,45,0.08);
-}
-.testimonial-body{ color:#6c7280; margin-bottom:8px; font-size:15px; line-height:1.6; }
-.testimonial-name{ font-weight:700; color:#222; margin-top:6px; }
-.testimonial-role{ color:#3b59d8; font-size:12px; text-transform:uppercase; }
 
-/* ensure owl stage allows overflow for avatars */
-.testimonials-carousel,
-.testimonials-carousel .owl-stage-outer,
-.testimonials-carousel .owl-stage,
-.testimonials-carousel .owl-item {
-  overflow: visible !important;
+.testimonials-track {
+  display: flex;
+  gap: 24px;
+  animation: slide-rtl 12s linear infinite;
 }
+
+.testimonial-card {
+  flex: 0 0 300px; /* card width */
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Smooth RTL slide (continuous loop) */
+@keyframes slide-rtl {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* duplicate track width should match half total content */
+}
+.testimonial-name {
+    font-weight: bold;
+    font-size: 18px; /* slightly larger */
+    color: #32609e; /* optional: make the name stand out */
+}
+
+.testimonial-role {
+    font-weight: bold;
+    font-size: 14px; /* smaller than name */
+    color: #4fb5e6; /* optional: a softer color for role */
+}
+
 
 /* responsive tweaks */
 @media (max-width: 767.98px) {

@@ -125,36 +125,62 @@ jQuery(function($) {
         }
      };
      hiResImg();
+
+     /* ---------------------------------------------
+ * Departments – Change center image on tab click
+ * --------------------------------------------- */
+(function () {
+  var $deptImage = $('#dept-image');
+
+  if (!$deptImage.length) return; // safety check
+
+  $('#dept-tab .nav-link').on('shown.bs.tab click', function () {
+    var imageSrc = $(this).data('image');
+
+    if (imageSrc) {
+      // Optional smooth fade effect
+      $deptImage.stop(true, true).fadeOut(150, function () {
+        $deptImage.attr('src', imageSrc).fadeIn(150);
+      });
+    }
+  });
+})();
+
  
-		// Testimonials: show 3 items initially, then start autoplay (RTL)
-(function(){
+// Testimonials: smooth continuous slider (RTL-safe)
+(function () {
   var $owl = $('.testimonials-carousel');
   if (!$owl.length || !$.fn.owlCarousel) return;
 
   $owl.owlCarousel({
     loop: true,
     margin: 24,
-    autoplay: false,            // start paused so first view is static
-    autoplayTimeout: 4200,
+
+    autoplay: true,
+    autoplayTimeout: 4000,
     autoplayHoverPause: true,
-    smartSpeed: 700,
+
+    smartSpeed: 1200,      // smooth slide animation
+    slideTransition: 'ease-in-out',
+
     dots: true,
-    nav: false,
-    rtl: true,                  // move right-to-left
+    nav: true,
+    navText: [
+      '<span class="icon-chevron-left"></span>',
+      '<span class="icon-chevron-right"></span>'
+    ],
+
+    rtl: true,
+
     responsive: {
       0:   { items: 1 },
       768: { items: 2 },
-      992: { items: 3 }         // show 3 items on desktop initially
+      992: { items: 3 }
     }
   });
-
-  // start autoplay after 2.5s (adjust delay as needed)
-  setTimeout(function(){
-    // play with the same timeout defined above
-    $owl.trigger('play.owl.autoplay', [4200]);
-  }, 2500);
-
 })();
+
+
  
   // ----- Gallery (Isotope) + Lightbox init -----
   (function() {
