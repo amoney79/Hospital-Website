@@ -1378,27 +1378,6 @@ textarea {
 }
 .doctor-social a:hover { background: rgba(43,111,183,0.06); }
 
-/* Featured (highlighted) card style like the screenshot */
-.doctor-card.featured {
-  background: #2b6fb7; /* blue */
-  color: #fff;
-  box-shadow: 0 12px 36px rgba(43,111,183,0.14);
-}
-.doctor-card.featured .doctor-avatar {
-  border-color: #2b6fb7;
-  background: #fff;
-}
-.doctor-card.featured h5,
-.doctor-card.featured p,
-.doctor-card.featured .doctor-social a {
-  color: #fff;
-}
-.doctor-card.featured .doctor-social a {
-  border-color: rgba(255,255,255,0.18);
-  color: #fff;
-}
-.doctor-card.featured .doctor-social a:hover { background: rgba(255,255,255,0.06); }
-
 /* Hover effect: make any doctor card turn blue (featured style) on mouse hover */
 .doctor-card {
   -webkit-transition: background .28s ease, color .28s ease, transform .18s ease, box-shadow .28s ease;
@@ -1443,13 +1422,8 @@ textarea {
   background: transparent;
 }
 
-/* ensure featured class still takes precedence (no conflict) */
-.doctor-card.featured,
-.doctor-card.featured:hover {
-  background: #2b6fb7;
-  color: #fff;
-}
-.doctor-card.featured .doctor-avatar { border-color: #2b6fb7; }
+
+ .doctor-avatar { border-color: #2b6fb7; }
 
 /* small screens: reduce translate so layout doesn't break */
 @media (max-width: 575.98px) {
@@ -1967,4 +1941,15 @@ textarea {
 @media (max-width: 767.98px) {
   .opening-card { margin-top: 20px; }
   .opening-hours li { padding-top: 10px; padding-bottom: 10px; }
+}
+.service-list {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.service-list li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6c757d;
+  margin-bottom: 6px;
 }
