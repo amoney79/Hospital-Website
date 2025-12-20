@@ -538,15 +538,24 @@ h5, .h5 {
       line-height: 1.2; }
 
 .form-control {
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  height: 55px;
-  border-radius: 0px;
-  background: none !important;
-  color: #fff !important;
+  border: 1px solid #ced4da;
+  height: 54px;
+  border-radius: 4px;
+  background: #fff !important;
+  color: #495057 !important;
   font-size: 16px; }
   .form-control:focus, .form-control:active {
-    border-bottom: 1px solid white; }
+    border: 1px solid #32609e;
+    outline: none;
+    box-shadow: none; }
+
+/* Styles for forms on dark/blue backgrounds (e.g. hero section) */
+.hero-full .form-control, .bg-primary .form-control, .overlay .form-control {
+  background: #fff !important;
+  color: #333 !important;
+  border: none;
+  border-radius: 40px; }
+
 
 textarea {
   height: inherit !important; }
@@ -967,17 +976,15 @@ textarea {
 
 /* CTA row */
 .hero-cta { margin-top: 6px; }
-.hero-select {
-  min-width: 320px;
-  max-width: 380px;
-  background: #fff;
-  border: 0;
-  height: 54px;
-  padding: 0 18px;
   border-radius: 40px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   font-size: 15px;
-  color: #333;
+  color: #333 !important;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 12px;
+  padding-right: 40px;
   -webkit-appearance: none;
   appearance: none;
 }
