@@ -1,193 +1,193 @@
-jQuery(function($) {
- 
-     "use strict";
- 
-     // loader
-     var loader = function() {
-         setTimeout(function() { 
-             if($('#probootstrap-loader').length > 0) {
-                 $('#probootstrap-loader').removeClass('show');
-             }
-         }, 1);
-     };
-     loader();
- 
-     var carousel = function() {
-         $('.owl-carousel').owlCarousel({
-             loop: true,
-             margin: 10,
-             nav: true,
-             stagePadding: 5,
-             nav: false,
-             navText: ['<span class="icon-chevron-left">', '<span class="icon-chevron-right">'],
-             responsive:{
-                 0:{
-                     items: 1
-                 },
-                 600:{
-                     items: 2
-                 },
-                 1000:{
-                     items: 3
-                 }
-             }
-         });
-     };
-     carousel();
- 
-     
-     var counter = function() {
-         
-         $('#section-counter').waypoint( function( direction ) {
- 
-             if( direction === 'down' && !$(this.element).hasClass('probootstrap-animated') ) {
- 
-                 var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-                 $('.probootstrap-number').each(function(){
-                     var $this = $(this),
-                         num = $this.data('number');
-                         console.log(num);
-                     $this.animateNumber(
-                       {
-                         number: num,
-                         numberStep: comma_separator_number_step
-                       }, 7000
-                     );
-                 });
-                 
-             }
- 
-         } , { offset: '95%' } );
- 
-     }
-     counter();
-     
-     
- 
-     var contentWayPoint = function() {
-         var i = 0;
-         $('.probootstrap-animate').waypoint( function( direction ) {
- 
-             if( direction === 'down' && !$(this.element).hasClass('probootstrap-animated') ) {
-                 
-                 i++;
- 
-                 $(this.element).addClass('item-animate');
-                 setTimeout(function(){
- 
-                     $('body .probootstrap-animate.item-animate').each(function(k){
-                         var el = $(this);
-                         setTimeout( function () {
-                             var effect = el.data('animate-effect');
-                             if ( effect === 'fadeIn') {
-                                 el.addClass('fadeIn probootstrap-animated');
-                             } else if ( effect === 'fadeInLeft') {
-                                 el.addClass('fadeInLeft probootstrap-animated');
-                             } else if ( effect === 'fadeInRight') {
-                                 el.addClass('fadeInRight probootstrap-animated');
-                             } else {
-                                 el.addClass('fadeInUp probootstrap-animated');
-                             }
-                             el.removeClass('item-animate');
-                         },  k * 50, 'easeInOutExpo' );
-                     });
-                     
-                 }, 100);
-                 
-             }
- 
-         } , { offset: '95%' } );
-     };
-     contentWayPoint();
- 
-     var datePicker = function() {
-         $('#probootstrap-date').datepicker({
-           'format': 'm/d/yyyy',
-           'autoclose': true
-         });
-     };
-     datePicker();
- 
-     var hiResImg = function() {
-         if (window.devicePixelRatio == 2) {
-       var images = $("img.hires");
- 
-       // loop through the images and make them hi-res
-       for(var i = 0; i < images.length; i++) {
-         // create new image name
-         var imageType = images[i].src.substr(-4);
-         var imageName = images[i].src.substr(0, images[i].src.length - 4);
-         imageName += "@3x" + imageType;
- 
-         //rename image
-         images[i].src = imageName;
-       }
+jQuery(function ($) {
+
+  "use strict";
+
+  // loader
+  var loader = function () {
+    setTimeout(function () {
+      if ($('#probootstrap-loader').length > 0) {
+        $('#probootstrap-loader').removeClass('show');
+      }
+    }, 1);
+  };
+  loader();
+
+  var carousel = function () {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      stagePadding: 5,
+      nav: false,
+      navText: ['<span class="icon-chevron-left">', '<span class="icon-chevron-right">'],
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
         }
-     };
-     hiResImg();
+      }
+    });
+  };
+  carousel();
 
-     /* ---------------------------------------------
- * Departments – Change center image on tab click
- * --------------------------------------------- */
-(function () {
-  var $deptImage = $('#dept-image');
 
-  if (!$deptImage.length) return; // safety check
+  var counter = function () {
 
-  $('#dept-tab .nav-link').on('shown.bs.tab click', function () {
-    var imageSrc = $(this).data('image');
+    $('#section-counter').waypoint(function (direction) {
 
-    if (imageSrc) {
-      // Optional smooth fade effect
-      $deptImage.stop(true, true).fadeOut(150, function () {
-        $deptImage.attr('src', imageSrc).fadeIn(150);
-      });
+      if (direction === 'down' && !$(this.element).hasClass('probootstrap-animated')) {
+
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+        $('.probootstrap-number').each(function () {
+          var $this = $(this),
+            num = $this.data('number');
+          console.log(num);
+          $this.animateNumber(
+            {
+              number: num,
+              numberStep: comma_separator_number_step
+            }, 7000
+          );
+        });
+
+      }
+
+    }, { offset: '95%' });
+
+  }
+  counter();
+
+
+
+  var contentWayPoint = function () {
+    var i = 0;
+    $('.probootstrap-animate').waypoint(function (direction) {
+
+      if (direction === 'down' && !$(this.element).hasClass('probootstrap-animated')) {
+
+        i++;
+
+        $(this.element).addClass('item-animate');
+        setTimeout(function () {
+
+          $('body .probootstrap-animate.item-animate').each(function (k) {
+            var el = $(this);
+            setTimeout(function () {
+              var effect = el.data('animate-effect');
+              if (effect === 'fadeIn') {
+                el.addClass('fadeIn probootstrap-animated');
+              } else if (effect === 'fadeInLeft') {
+                el.addClass('fadeInLeft probootstrap-animated');
+              } else if (effect === 'fadeInRight') {
+                el.addClass('fadeInRight probootstrap-animated');
+              } else {
+                el.addClass('fadeInUp probootstrap-animated');
+              }
+              el.removeClass('item-animate');
+            }, k * 50, 'easeInOutExpo');
+          });
+
+        }, 100);
+
+      }
+
+    }, { offset: '95%' });
+  };
+  contentWayPoint();
+
+  var datePicker = function () {
+    $('#probootstrap-date').datepicker({
+      'format': 'm/d/yyyy',
+      'autoclose': true
+    });
+  };
+  datePicker();
+
+  var hiResImg = function () {
+    if (window.devicePixelRatio == 2) {
+      var images = $("img.hires");
+
+      // loop through the images and make them hi-res
+      for (var i = 0; i < images.length; i++) {
+        // create new image name
+        var imageType = images[i].src.substr(-4);
+        var imageName = images[i].src.substr(0, images[i].src.length - 4);
+        imageName += "@3x" + imageType;
+
+        //rename image
+        images[i].src = imageName;
+      }
     }
-  });
-})();
+  };
+  hiResImg();
 
- 
-// Testimonials: smooth continuous slider (RTL-safe)
-(function () {
-  var $owl = $('.testimonials-carousel');
-  if (!$owl.length || !$.fn.owlCarousel) return;
+  /* ---------------------------------------------
+* Departments – Change center image on tab click
+* --------------------------------------------- */
+  (function () {
+    var $deptImage = $('#dept-image');
 
-  $owl.owlCarousel({
-    loop: true,
-    margin: 24,
+    if (!$deptImage.length) return; // safety check
 
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
+    $('#dept-tab .nav-link').on('shown.bs.tab click', function () {
+      var imageSrc = $(this).data('image');
 
-    smartSpeed: 1200,      // smooth slide animation
-    slideTransition: 'ease-in-out',
-
-    dots: true,
-    nav: true,
-    navText: [
-      '<span class="icon-chevron-left"></span>',
-      '<span class="icon-chevron-right"></span>'
-    ],
-
-    rtl: true,
-
-    responsive: {
-      0:   { items: 1 },
-      768: { items: 2 },
-      992: { items: 3 }
-    }
-  });
-})();
+      if (imageSrc) {
+        // Optional smooth fade effect
+        $deptImage.stop(true, true).fadeOut(150, function () {
+          $deptImage.attr('src', imageSrc).fadeIn(150);
+        });
+      }
+    });
+  })();
 
 
- 
+  // Testimonials: smooth continuous slider (RTL-safe)
+  (function () {
+    var $owl = $('.testimonials-carousel');
+    if (!$owl.length || !$.fn.owlCarousel) return;
+
+    $owl.owlCarousel({
+      loop: true,
+      margin: 24,
+
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+
+      smartSpeed: 1200,      // smooth slide animation
+      slideTransition: 'ease-in-out',
+
+      dots: true,
+      nav: true,
+      navText: [
+        '<span class="icon-chevron-left"></span>',
+        '<span class="icon-chevron-right"></span>'
+      ],
+
+      rtl: true,
+
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        992: { items: 3 }
+      }
+    });
+  })();
+
+
+
   // ----- Gallery (Isotope) + Lightbox init -----
-  (function() {
+  (function () {
     // run only if gallery present
     if ($('.gallery-grid').length) {
       // safe checks
-      var initIsotope = function() {
+      var initIsotope = function () {
         try {
           var grid = document.querySelector('.gallery-grid');
           var iso = new Isotope(grid, {
@@ -205,16 +205,16 @@ jQuery(function($) {
           if (imgs.length === 0) {
             iso.layout();
           } else {
-            imgs.forEach(function(img){
+            imgs.forEach(function (img) {
               if (img.complete) {
                 loadedCount++;
                 if (loadedCount === imgs.length) iso.layout();
               } else {
-                img.addEventListener('load', function(){
+                img.addEventListener('load', function () {
                   loadedCount++;
                   iso.layout();
                 });
-                img.addEventListener('error', function(){
+                img.addEventListener('error', function () {
                   loadedCount++;
                   iso.layout();
                 });
@@ -223,7 +223,7 @@ jQuery(function($) {
           }
 
           // filter buttons
-          $('.gallery-filter-btn').on('click', function(e){
+          $('.gallery-filter-btn').on('click', function (e) {
             e.preventDefault();
             var $btn = $(this);
             $('.gallery-filter-btn').removeClass('active');
@@ -257,23 +257,23 @@ jQuery(function($) {
   })();
 
   // ----- Donation interactions (if donation UI present) -----
-  (function() {
+  (function () {
     if (!$('.donation-card').length && !$('.donation-heart-btn').length) return;
 
     // toggle aria state on heart button for accessibility
-    $(document).on('click', '.donation-heart-btn', function() {
+    $(document).on('click', '.donation-heart-btn', function () {
       var $btn = $(this);
       var target = $btn.attr('data-target') || $btn.data('target') || '#donation-form';
       var $target = $(target);
       // Bootstrap collapse will handle show/hide; keep aria-consistent
-      setTimeout(function(){
+      setTimeout(function () {
         var expanded = $target.hasClass('show');
         $btn.attr('aria-expanded', expanded);
       }, 50);
     });
 
     // donation amount quick-select buttons
-    $(document).on('click', '.donation-amount', function(e){
+    $(document).on('click', '.donation-amount', function (e) {
       e.preventDefault();
       var $btn = $(this);
       var amount = $btn.data('amount') || '';
@@ -284,14 +284,14 @@ jQuery(function($) {
     });
 
     // custom amount input updates hidden field and removes active from presets
-    $(document).on('input', '#custom-amount', function(){
+    $(document).on('input', '#custom-amount', function () {
       var val = $(this).val();
       $('.donation-amount').removeClass('active');
       $('#donation-amount-input').val(val || '');
     });
 
     // ensure a donation amount is set before submit (client-side)
-    $(document).on('submit', '.donation-form', function(e){
+    $(document).on('submit', '.donation-form', function (e) {
       var amount = $('#donation-amount-input').val();
       if (!amount || Number(amount) <= 0) {
         e.preventDefault();
@@ -304,7 +304,7 @@ jQuery(function($) {
   })();
 
   // Auto-collapse history panel after it is opened (8 seconds)
-  (function() {
+  (function () {
     var AUTO_COLLAPSE_MS = 8000; // milliseconds to wait before auto-collapse
     var timerKey = 'historyAutoCollapseTimer';
 
@@ -319,12 +319,12 @@ jQuery(function($) {
       }
 
       // scroll into view a little for better UX
-      setTimeout(function(){
+      setTimeout(function () {
         $('html, body').animate({ scrollTop: $panel.offset().top - 80 }, 350);
       }, 80);
 
       // set auto-collapse timer
-      var t = setTimeout(function(){
+      var t = setTimeout(function () {
         $panel.collapse('hide');
       }, AUTO_COLLAPSE_MS);
 
@@ -351,5 +351,50 @@ jQuery(function($) {
     });
   })();
 
- });
+  // ----- Form Submission Handlers -----
+  (function () {
+    // Appointment Forms
+    $(document).on('submit', '.probootstrap-form-appointment, #appointment-form-side', function (e) {
+      e.preventDefault();
+      var $form = $(this);
+      var formData = $form.serializeArray();
+      var dataObj = {};
+      formData.forEach(function (item) {
+        dataObj[item.name] = item.value;
+      });
+
+      // Simulation of email sending
+      console.log('Form submitted:', dataObj);
+
+      // Construct mailto link for "send email message" part of request
+      var subject = encodeURIComponent('New Appointment Request from ' + dataObj.first_name + ' ' + dataObj.last_name);
+      var body = encodeURIComponent(
+        'New Appointment Request:\n\n' +
+        'Name: ' + dataObj.first_name + ' ' + dataObj.last_name + '\n' +
+        'Service: ' + (dataObj.service || 'Not specified') + '\n' +
+        'Phone: ' + (dataObj.phone || 'Not specified') + '\n' +
+        'Date/Time: ' + (dataObj.date || 'Not set') + ' at ' + (dataObj.time || 'Not set') + '\n' +
+        'Message: ' + (dataObj.message || 'No message')
+      );
+
+      // We show success alert first
+      alert('Thank you! Your appointment request has been received. Redirecting to your email client to send the details.');
+
+      window.location.href = "mailto:marafikicommunityhospital@gmail.com?subject=" + subject + "&body=" + body;
+
+      $form[0].reset();
+    });
+
+    // Contact Forms
+    $(document).on('submit', '.probootstrap-form', function (e) {
+      if ($(this).hasClass('probootstrap-form-appointment')) return; // handled above
+
+      e.preventDefault();
+      var $form = $(this);
+      alert('Thank you for your message! We will get back to you shortly.');
+      $form[0].reset();
+    });
+  })();
+
+});
 
