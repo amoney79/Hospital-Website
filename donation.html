@@ -280,85 +280,64 @@
         </div>
       </div>
 
-      <!-- EXPANDED DONATION FORM -->
+      <!-- EXPANDED DONATION INFO -->
       <div class="collapse mt-5" id="donation-form">
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="donation-card">
-              <h4 class="mb-4 text-center" data-i18n="donate.form.title">Support the Pad & Tampon Project</h4>
+              <h4 class="mb-4 text-primary" data-i18n="donate.support.title">Support our project</h4>
 
-              <!-- DONATION AMOUNT OPTIONS -->
-              <div class="row mb-4">
-                <div class="col-md-12">
-                  <label class="mb-3 d-block" data-i18n="donate.amount.label">Select Donation Amount</label>
-                  <div class="btn-group w-100" role="group">
-                    <button type="button" class="btn btn-outline-primary donation-amount" data-amount="500">KES
-                      500</button>
-                    <button type="button" class="btn btn-outline-primary donation-amount" data-amount="1000">KES
-                      1,000</button>
-                    <button type="button" class="btn btn-outline-primary donation-amount" data-amount="2500">KES
-                      2,500</button>
-                    <button type="button" class="btn btn-outline-primary donation-amount" data-amount="5000">KES
-                      5,000</button>
-                  </div>
+              <!-- BANK TRANSFER DETAILS -->
+              <div class="payment-info-section mb-4">
+                <div class="payment-info-item">
+                  <span class="info-label">Account name:</span>
+                  <span class="info-value">MARAFIKI COMMUNITY HOSPITAL</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Bank:</span>
+                  <span class="info-value">KCB BANK KENYA LIMITED</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Account number:</span>
+                  <span class="info-value">1331387655</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Bank code:</span>
+                  <span class="info-value">01</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Branch code:</span>
+                  <span class="info-value">227</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Swift code:</span>
+                  <span class="info-value">KCBLKENX</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Reason:</span>
+                  <span class="info-value">Donation</span>
                 </div>
               </div>
 
-              <!-- CUSTOM AMOUNT -->
-              <div class="form-group mb-4">
-                <label for="custom-amount" data-i18n="donate.custom.label">Or enter a custom amount</label>
-                <div class="input-group input-group-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">KES</span>
-                  </div>
-                  <input type="number" id="custom-amount" class="form-control" placeholder="Enter amount" min="100"
-                    data-i18n="donate.custom.p">
+              <!-- M-PESA DETAILS -->
+              <div class="payment-info-section mpesa-section">
+                <h5 class="mb-3" data-i18n="donate.kenya.title">For donations from Kenya:</h5>
+                <div class="mpesa-badge mb-3">
+                  <span class="mpesa-logo">M-Pesa</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Pay bill number:</span>
+                  <span class="info-value">522533</span>
+                </div>
+                <div class="payment-info-item">
+                  <span class="info-label">Account number:</span>
+                  <span class="info-value">7894194</span>
                 </div>
               </div>
 
-              <!-- DONATION FORM -->
-              <form action="process-donation.php" method="POST" class="donation-form">
-                <div class="form-group mb-3">
-                  <label for="donor-name" data-i18n="form.label.name">Full Name</label>
-                  <input type="text" id="donor-name" name="name" class="form-control form-control-lg"
-                    placeholder="Your full name" required data-i18n="donate.p.name">
-                </div>
-
-                <div class="form-group mb-3">
-                  <label for="donor-email" data-i18n="form.label.email">Email Address</label>
-                  <input type="email" id="donor-email" name="email" class="form-control form-control-lg"
-                    placeholder="your@email.com" required data-i18n="form.p_email">
-                </div>
-
-                <div class="form-group mb-3">
-                  <label for="donor-phone" data-i18n="form.label.phone">Phone Number</label>
-                  <input type="tel" id="donor-phone" name="phone" class="form-control form-control-lg"
-                    placeholder="+254 7XX XXX XXX" required data-i18n="donate.p.phone">
-                </div>
-
-                <div class="form-group mb-3">
-                  <label for="donor-message" data-i18n="form.label.message">Message (Optional)</label>
-                  <textarea id="donor-message" name="message" class="form-control" rows="4"
-                    placeholder="Share why you're supporting this cause..." data-i18n="donate.p.msg"></textarea>
-                </div>
-
-                <div class="form-check mb-4">
-                  <input class="form-check-input" type="checkbox" id="anonymous" name="anonymous">
-                  <label class="form-check-label" for="anonymous" data-i18n="donate.anon">
-                    Make my donation anonymous
-                  </label>
-                </div>
-
-                <input type="hidden" id="donation-amount-input" name="amount" value="">
-
-                <button type="submit" class="btn btn-success btn-lg btn-block">
-                  <span class="heart">♥</span> <span data-i18n="donate.complete">Complete Donation</span>
-                </button>
-
-                <p class="text-center text-muted small mt-3" data-i18n="donate.secure">
-                  Your donation is secure and encrypted. All proceeds go directly to the Pad & Tampon Project.
-                </p>
-              </form>
+              <p class="text-center text-muted small mt-4" data-i18n="donate.thankyou">
+                Thank you for your generous support. All proceeds go directly to the Pad & Tampon Project.
+              </p>
             </div>
           </div>
         </div>
@@ -491,25 +470,6 @@
   <script src="js/translations.js"></script>
 
   <script src="js/main.js"></script>
-
-  <script>
-    // Donation amount selection
-    document.querySelectorAll('.donation-amount').forEach(btn => {
-      btn.addEventListener('click', function () {
-        document.querySelectorAll('.donation-amount').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        document.getElementById('donation-amount-input').value = this.dataset.amount;
-      });
-    });
-
-    // Update hidden input from custom amount
-    document.getElementById('custom-amount').addEventListener('input', function () {
-      if (this.value) {
-        document.querySelectorAll('.donation-amount').forEach(b => b.classList.remove('active'));
-        document.getElementById('donation-amount-input').value = this.value;
-      }
-    });
-  </script>
 
 </body>
 
